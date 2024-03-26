@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background-color: #0c1220;
+}
+.navbar {
+    background-color: #080d18;
+}
+
+.logo {
+    color: #ffb83d;
+    font-family: cursive;
+    font-weight: bolder;
+    margin-right: 200px;
+    font-size: 30px;
+}
+.active {
+    color: #ffb83d !important;
+}
+.acive-li {
+    margin-left: 200px;
+
+}
+header .nav-link {
+    color: white;
+    margin-left: 10px;
+}
+
+header.heading {
+    background: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .nav-link:hover {
+    color: #ffb83d;
+}
+
+.navbar-nav .boton:hover {
+    color: white;
+}
+
+header .dropdown-menu {
+    border-radius: 0;
+}
+
+.navbar-nav .boton, .boton {
+    background-color: #FEA116;
+    padding: 5px;
+    color: white;
+    width: 180px;
+}
+.boton:hover {
+    background-color: #8f5806;
+}
+
+@media screen and (max-width: 730px){
+    .col-md-12 .col, .col-md-12 .btn-row {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .acive-li {
+        margin-left: 0;
+    }
+    .row img {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .email button  {
+        margin-right: 170px;
+    }
+    .email {
+        justify-content: center;
+        align-items: center;
+    }
+    header .ptwo-head-sm {
+        display: flex;
+        flex-direction: column;
+        background: url("background.png");
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+        height: 500px;
+        position: relative;
+        top: 70px;
+        justify-content: end;
+        align-items: center;
+        text-align: end;
+        padding: 30px;
+    }
+    .breadcrumb-item a {
+        text-decoration: none;
+        color: white;
+    }
+    .ptwo-head {
+        margin-top: 300px;
+    }
+    .upward {
+        z-index: 1 !important;
+    }
+}
+
+/* =============================================== */
+
+.row .boton {
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.row img {
+    width: 400px;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+.second-row {
+    padding-top: 100px !important;
+    padding: 50px;
+    color: white;
+}
+h1 {
+    font-family: cursive;
+    font-weight: bolder;
+}
+.ptwo-head-sm h1 {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.second-row .first-second-row {
+    margin-top: 80px;
+}
+/* ================================================== */
+footer {
+    background-color: #0a0f1a;
+    color: white;
+    font-family: Consolas;
+    padding: 15px;
+}
+
+.footer-title {
+    color: #ffb83d;
+    font-family: "Lucida Handwriting", cursive;
+}
+.contact-icons-container {
+    display: flex;
+    justify-content: space-around;
+}
+.contact-icons-container i {
+    color: white; 
+    font-size: 20px; 
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 10px;
+}
+.col {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.hours {
+    font-size: 13px;
+}
+.email > input {
+    border-radius: 0;
+    height: 50px;
+    position: absolute;
+    width: 300px;
+}
+.email button  {
+    background-color: #ffb83d;
+    width: 120px;
+    color: white;
+    border-radius: 0;
+    position: relative;
+    margin-top: 7px;
+    left: 170px;
+}
+/* ===================== */
+
+.upward {
+    width: 50px;
+    position: sticky;
+    /* background-color: #FEA116; */
+    /* z-index: -1; */
+    /* top: 1200px; */
+    /* top: 500px;
+    left: 500px; */
+    /* display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center; */
+    /* display: none; */
+    padding: 20px;
+    width: 60px;
+}
+
+.ptwo-head {
+    background-color: white;
+    margin-top: 100px;
+}
+
+.ptwo-head .number {
+    font-size: 40px;
+    color: #ffb83d;
+    font-weight: bold;
+    border-left: 4px solid #ffb83d;
+}
+.title-ptwo {
+    font-weight: bolder;
+}
+.ptwo-boton {
+    height: 50px;
+}
+.ptwo-head img {
+    width: 100px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+#img-2 {
+    left: 5px;
+    top: 25px;
+}
+#img-3 {
+    top: 188px;
+    right: 310px;
+}
+#img-4 {
+    top: 10px;
+    left: 210px;
+}
+.ptwo-head-sm {
+    display: none;
+}
+/* ================================ */
+.pthree-card-icon {
+    font-size: 40px;
+    color: #ffb83d;
+    transition: color 0.3s ease;
+}
+.pthree-card-title {
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: cursive;
+    color: black;
+}
+.pthree-card {
+    box-shadow: 1px 1px 10px rgb(163, 163, 163);
+    padding: 10px;
+    margin-left: 5px;
+    /* width: 200px; */
+    transition: background-color 0.3s ease;
+    color: gray;
+}
+.pthree-card:hover {
+    background-color: #ffb83d;
+    color: white;
+}
+
+.pthree-card:hover .pthree-card-icon {
+    color: white;
+}
+
+.upward-pthree {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+}
+/* ============================== */

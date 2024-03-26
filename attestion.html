@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Attestation</title>
+</head>
+<style>
+    .titre1 {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        color: #FEA116;
+        font-family: 'Pacifico', cursive;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .titre {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FEA116;
+        font-family: 'Pacifico', cursive;
+    }
+
+    h1 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+    }
+
+    i {
+        color: #FEA116;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .card h3 {
+        text-align: center;
+    }
+
+    .swiper-container {
+        position: relative;
+
+        width: 128%;
+    }
+
+    .swiper {
+        margin: 0 auto;
+        cursor: grab;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mb-1 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+    }
+
+    small {
+        color: rgba(128, 128, 128, 0.667);
+    }
+
+    .swiper-pagination {
+        transform: translateY(200%);
+    }
+
+    .swiper-pagination-bullet {
+        background: #FEA116;
+        width: 15px;
+        height: 15px;
+    }
+
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #FEA116;
+        border-radius: 0;
+
+    }
+
+
+    .navbar {
+        background-color: #0f172a;
+    }
+
+    .logo {
+        color: #ffb83d;
+        font-family: cursive;
+        font-weight: bolder;
+        margin-right: 200px;
+        font-size: 30px;
+    }
+
+    .active {
+        color: #ffb83d !important;
+    }
+
+    .acive-li {
+        margin-left: 200px;
+
+    }
+
+    header .nav-link {
+        color: white;
+        margin-left: 10px;
+    }
+
+    header.heading {
+        background: url("background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header .nav-link:hover {
+        color: #ffb83d;
+    }
+
+    .navbar-nav .boton:hover {
+        color: white;
+    }
+
+    header .dropdown-menu {
+        border-radius: 0;
+    }
+
+    .navbar-nav .boton,
+    .boton {
+        background-color: #ffb83d;
+        padding: 5px;
+        color: white;
+        width: 180px;
+    }
+
+    footer {
+        background-color: #0f172a;
+        color: white;
+        font-family: Consolas;
+        padding: 15px;
+    }
+
+    .footer-title {
+        color: #ffb83d;
+        font-family: "Lucida Handwriting", cursive;
+    }
+
+    .contact-icons-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contact-icons-container i {
+        color: white;
+        font-size: 20px;
+        border: 1px solid white;
+        border-radius: 100%;
+        padding: 10px;
+    }
+
+    .col {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    .hours {
+        font-size: 13px;
+    }
+
+    .email>input {
+        border-radius: 0;
+        height: 50px;
+        position: absolute;
+        width: 300px;
+    }
+
+    .email button {
+        background-color: #ffb83d;
+        width: 120px;
+        color: white;
+        border-radius: 0;
+        position: relative;
+        margin-top: 7px;
+        left: 170px;
+    }
+
+    @media screen and (max-width: 730px) {
+
+        .col-md-12 .col,
+        .col-md-12 .btn-row {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .acive-li {
+            margin-left: 0;
+        }
+
+        .row img {
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .email button {
+            margin-right: 170px;
+        }
+
+        .email {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upward {
+            z-index: 1 !important;
+            opacity: 1 !important;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 50px !important;
+            left: 480px !important;
+            background-color: #FEA116;
+            border-radius: 0;
+        }
+    }
+
+    .upward {
+        width: 65px;
+        position: sticky;
+        padding: 20px;
+        height: 70px;
+        opacity: 0;
+    }
+
+    main {
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .coloring {
+        background-color: #FEA116;
+    }
+</style>
+
+<body>
+    <header class="container-fluid" id="head">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top p-3">
+            <div class="float-start">
+                <a href="head.html" class="navbar-brand" style="font-size: 30px;"><i class="fa-solid fa-utensils"
+                        style="color: #ffb83d;"></i><span class="logo"> Restoran</span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#resto">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="resto">
+                <ul class="navbar-nav">
+                    <li>
+                        <hr href="" class="navbar-divider text-light">
+                    </li>
+                    <li class="nav-item acive-li"><a href="head.html" type="button" class="nav-link">DOMICILE</a>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ENVIRON</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICE</a></li>
+                    <li class="nav-item"><a href="menuu.html" class="nav-link">MENU</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PAGES</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="reservation.html" class="dropdown-item">Réservation</a></li>
+                                <li><a href="equipe.html" class="dropdown-item">Notre equipe</a></li>
+                                <li><a href="attestion.html" class="dropdown-item coloring">Attestation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                    <li class="nav-item"><a href="reservation.html" class="nav-link boton">RÉSERVER UNE TABLE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div class="text-center">
+            <div class="titre">
+
+                <div style="font-size: 100px; font-weight: lighter;" class="material-symbols-outlined text-center">
+                    horizontal_rule</div>
+                <h5 class="top">Attestation</h5>
+                <div style="font-size: 100px; font-weight: lighter;" class="material-symbols-outlined text-center">
+                    horizontal_rule</div>
+            </div>
+            <h1 style="margin-top: -20px;">L'avis de nox clients</h1>
+        </div>
+
+        <div class="container">
+            <div class="swiper-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+
+                                <i class="fa fa-quote-left fa-2x  mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded-circle"
+                                        src="attestation image/client1.jpg" style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <i class="fa fa-quote-left fa-2x  mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid  rounded-circle" src="attestation image/client2.jpg"
+                                        style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <i class="fa fa-quote-left fa-2x  mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid  rounded-circle" src="attestation image/client3.jpg"
+                                        style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <i class="fa fa-quote-left fa-2x  mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid  rounded-circle" src="attestation image/client4.jpg"
+                                        style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <i class="fa fa-quote-left fa-2x  mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid  rounded-circle" src="attestation image/client3.jpg"
+                                        style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <i class="fa fa-quote-left fa-2x y mb-3"></i>
+                                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
+                                    labore diam</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid  rounded-circle" src="attestation image/client2.jpg"
+                                        style="width: 50px; height: 50px;">
+                                    <div class="ps-3">
+                                        <h5 class="mb-1">Client Name</h5>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-12 col-lg-3">
+                        <div class="titre1">
+
+                            <h5 class="top">Compagnie</h5>
+                            <div style="font-size: 100px; font-weight: lighter;"
+                                class="material-symbols-outlined text-center">horizontal_rule</div>
+                        </div>
+                        <div class="row">> Qui Sommes-Nous</div>
+                        <div class="row">> Contactez-Nous</div>
+                        <div class="row">> Réservation</div>
+                        <div class="row">> Politique De Confidentialité</div>
+                        <div class="row">> Terme Et Conditions</div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="titre1">
+
+                            <h5 class="top">Contact</h5>
+                            <div style="font-size: 100px; font-weight: lighter;"
+                                class="material-symbols-outlined text-center">horizontal_rule</div>
+                        </div>
+                        <div class="row"><span><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 123
+                                Street, New York, Etats-Unis</span></div>
+                        <div class="row">
+                            <span><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +012 345
+                                67890</span>
+                        </div>
+                        <div class="row"><span><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                                info@example.com</span></div>
+                        <div class="row  no-gutters m-0 p-0  contact-icons-container">
+                            <div class="col border-0 p-0">
+                                <span class="circle">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </div>
+                            <div class="col border-0 p-0">
+                                <span class="circle">
+                                    <i class="fab fa-facebook-f" style="color: #ffffff;"></i>
+                                </span>
+                            </div>
+                            <div class="col border-0 p-0">
+                                <span class="circle">
+                                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i> </span>
+                            </div>
+                            <div class="col border-0 p-0">
+                                <span class="circle">
+                                    <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i> </span>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="titre1">
+
+                            <h5 class="top">Ouverture</h5>
+                            <div style="font-size: 100px; font-weight: lighter;"
+                                class="material-symbols-outlined text-center">horizontal_rule</div>
+                        </div>
+                        <div class="row">Lundi - Samedi</div>
+                        <div class="row hours">09h - 21h</div>
+                        <div class="row">Dimanche</div>
+                        <div class="row hours">10h-20h</div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="titre1">
+
+                            <h5 class="top">Bulletin</h5>
+                            <div style="font-size: 100px; font-weight: lighter;"
+                                class="material-symbols-outlined text-center">horizontal_rule</div>
+                        </div>
+                        <div class="row">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                            reprehenderit.</div>
+                        <div class="row email">
+                            <input type="email" class="form-control" placeholder="Votre address e-mail">
+                            <button class="btn btn-outline-secondary" type="button">S'INSCRIRE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </footer>
+
+    <a href="#head" class="boton upward btn btn-lg btn-lg-square back-to-top" style=" background-color: orange;"><span
+            style="color: white;" class="material-symbols-outlined">
+            north
+        </span></a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+</script>
+</body>
+
+</html>
